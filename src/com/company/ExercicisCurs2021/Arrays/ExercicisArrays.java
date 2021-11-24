@@ -185,11 +185,11 @@ public class ExercicisArrays {
 
         for (int i = 0; i < n; i++){
             System.out.println("Escriu un caràcter");
-            caracters[i] = scanner.next().charAt(i);
+            caracters[i] = scanner.next().charAt(0);
         }
 
         for (int i = 0; i < n; i++){
-            System.out.println(caracters[i]);
+            System.out.print(caracters[i] + ", ");
         }
     }
 
