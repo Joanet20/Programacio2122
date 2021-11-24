@@ -20,6 +20,6 @@ public class Main {
 
         //ExercicisArrays.exercici9();
 
-        ExercicisArrays.exercici11();
+        ExercicisArrays.exercici10();
     }
 }

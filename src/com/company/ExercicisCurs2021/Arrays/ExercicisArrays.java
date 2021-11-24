@@ -1,5 +1,6 @@
 package com.company.ExercicisCurs2021.Arrays;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ExercicisArrays {
@@ -141,7 +142,36 @@ public class ExercicisArrays {
         }
     }
 
-    public static void exercici11(){
+
+    public static void exercici10(){
+        Scanner scanner = new Scanner(System.in);
+        int n = 1;
+
+        ArrayList<Integer> positius = new ArrayList<Integer>();
+        ArrayList<Integer> negatius = new ArrayList<Integer>();
+
+        for (int i = 0; n != 0; i++){
+
+            System.out.println("Escriu un número");
+            n = scanner.nextInt();
+
+            if (n > 0){
+                positius.add(n);
+            } else if (n < 0){
+                negatius.add(n);
+            }
+        }
+
+        for (int i = 0; i < positius.size(); i++){
+            System.out.print("Els números positius son: " + positius.get(i));
+        }
+
+        for (int i = 0; i < negatius.size(); i++){
+            System.out.print("Els números negatius son: " + negatius.get(i));
+        }
+    }
+
+    /*public static void exercici12(){
         int n = 3;
         char [] array = new char[n];
         Scanner scanner = new Scanner(System.in);
@@ -155,5 +185,5 @@ public class ExercicisArrays {
         for (int i = 0; i < array.length; i++){
             System.out.println(array[i]);
         }
-    }
+    }*/
 }
