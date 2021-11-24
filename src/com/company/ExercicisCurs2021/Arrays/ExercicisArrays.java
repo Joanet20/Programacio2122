@@ -162,12 +162,17 @@ public class ExercicisArrays {
             }
         }
 
+        System.out.println("Els números positius són: ");
+
         for (int i = 0; i < positius.size(); i++){
-            System.out.print("Els números positius son: " + positius.get(i));
+            System.out.print(positius.get(i) + ", ");
         }
+        System.out.println("");
+
+        System.out.println("Els números negatius són: ");
 
         for (int i = 0; i < negatius.size(); i++){
-            System.out.print("Els números negatius son: " + negatius.get(i));
+            System.out.print(negatius.get(i) + ", ");
         }
     }
 
