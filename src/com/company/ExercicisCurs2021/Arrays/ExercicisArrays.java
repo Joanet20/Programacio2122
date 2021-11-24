@@ -181,6 +181,10 @@ public class ExercicisArrays {
         int n = 4;
         char [] caracters = new char[n];
 
+        int x = 0;
+
+        char caracter = ' ';
+
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < n; i++){
@@ -188,24 +192,17 @@ public class ExercicisArrays {
             caracters[i] = scanner.next().charAt(0);
         }
 
+        System.out.println("Introdueix un caràcter per saber quants de pics surt: ");
+        caracter = scanner.next().charAt(0);
+
         for (int i = 0; i < n; i++){
-            System.out.print(caracters[i] + ", ");
+            if (caracters[i] == caracter){
+                x++;
+            }
         }
+
+        System.out.println("El caràcter apareix " + x + " vegades.");
     }
 
-    /*public static void exercici12(){
-        int n = 3;
-        char [] array = new char[n];
-        Scanner scanner = new Scanner(System.in);
 
-
-        for (int i = 0; i < array.length; i++){
-            System.out.println("Escriu una lletra o caràcter");
-
-        }
-
-        for (int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
-    }*/
 }
