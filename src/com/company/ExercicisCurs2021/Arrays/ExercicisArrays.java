@@ -1,5 +1,6 @@
 package com.company.ExercicisCurs2021.Arrays;
 
+import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -173,6 +174,22 @@ public class ExercicisArrays {
 
         for (int i = 0; i < negatius.size(); i++){
             System.out.print(negatius.get(i) + ", ");
+        }
+    }
+
+    public static void exercici11(){
+        int n = 4;
+        char [] caracters = new char[n];
+
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < n; i++){
+            System.out.println("Escriu un caràcter");
+            caracters[i] = scanner.next().charAt(i);
+        }
+
+        for (int i = 0; i < n; i++){
+            System.out.println(caracters[i]);
         }
     }
 
