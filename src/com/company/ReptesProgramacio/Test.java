@@ -4,6 +4,8 @@ public class Test {
     public static void main(String[] args) {
         //ExamenArray.exercici1();
 
-        ExamenArray.exercici2();
+        //ExamenArray.exercici2();
+
+        ExamenArray.exercici3();
     }
 }

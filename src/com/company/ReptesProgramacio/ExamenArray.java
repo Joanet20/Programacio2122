@@ -26,7 +26,19 @@ public class ExamenArray {
             }
         }
 
-        System.out.println(nummesPetit);
         return nummesPetit;
+    }
+
+    public static int exercici3(){
+        int [] enters = {5, 24, 3, 9};
+        int indexMinim = 0;
+        int numMinim = enters[0];
+
+        for (int i = 1; i < enters.length; i++){
+            if (numMinim > enters[i]){
+                indexMinim = i;
+            }
+        }
+        return indexMinim;
     }
 }
