@@ -41,4 +41,16 @@ public class ExamenArray {
         }
         return indexMinim;
     }
+
+    public static int exercici4(){
+        int [] enters = {20, 4, 69, 19, 24};
+        int numMaxim = enters[0];
+
+        for (int i = 1; i < enters.length; i++){
+            if (numMaxim < enters[i]){
+                numMaxim = enters[i];
+            }
+        }
+        return numMaxim;
+    }
 }
