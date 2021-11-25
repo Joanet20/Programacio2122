@@ -37,6 +37,7 @@ public class ExamenArray {
         for (int i = 1; i < enters.length; i++){
             if (numMinim > enters[i]){
                 indexMinim = i;
+                numMinim = enters[i];
             }
         }
         return indexMinim;
@@ -52,5 +53,19 @@ public class ExamenArray {
             }
         }
         return numMaxim;
+    }
+
+    public static int exercici5(){
+        int [] enters = {3, 43, 4, 9, 1};
+        int numMaxim = enters[0];
+        int indexMaxim = 0;
+
+        for (int i = 1; i < enters.length; i++){
+            if (numMaxim < enters[i]){
+                indexMaxim = i;
+                numMaxim = enters[i];
+            }
+        }
+        return indexMaxim;
     }
 }
