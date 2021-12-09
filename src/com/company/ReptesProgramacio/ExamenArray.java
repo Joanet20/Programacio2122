@@ -68,4 +68,18 @@ public class ExamenArray {
         }
         return indexMaxim;
     }
+
+
+    public static boolean exercici6(){
+
+        boolean ordre;
+        int [] enters ={1, 2, 3, 4};
+        if (enters[1] > enters[2]){
+            ordre = false;
+        } else {
+            ordre = true;
+        }
+        System.out.println(ordre);
+        return ordre;
+    }
 }

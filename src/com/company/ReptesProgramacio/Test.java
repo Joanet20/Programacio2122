@@ -10,6 +10,8 @@ public class Test {
 
         //ExamenArray.exercici4();
 
-        ExamenArray.exercici5();
+        //ExamenArray.exercici5();
+
+        ExamenArray.exercici6();
     }
 }
