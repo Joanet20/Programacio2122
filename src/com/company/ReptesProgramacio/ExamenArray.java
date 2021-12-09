@@ -97,7 +97,7 @@ public class ExamenArray {
             }
         }
 
-        if (impars[0] < impars[1]){
+        if (impars[0] > impars[1]){
             ordre = false;
         } else {
             ordre = true;
