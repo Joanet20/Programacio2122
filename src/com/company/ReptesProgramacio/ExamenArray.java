@@ -113,9 +113,48 @@ public class ExamenArray {
         for (int i = 0; i < enters.length; i++){
             reves[i] = enters[enters.length - i -1];
         }
-        for (int i = 0; i < reves.length; i++){
-            System.out.println(reves[i]);
-        }
         return reves;
+    }
+
+    /*public static int exercici9(){
+
+        int num = 9;
+
+        int [] enters = {2, 4, 7, 9, 7};
+
+
+    }*/
+
+    public static int exercici10(){
+        int [] enters = {2, 4, 5, 9, 7};
+        int [] diferencies = new int[enters.length];
+        int valorProper;
+        int total = 0;
+        int mitja;
+
+        for (int i = 0; i < enters.length; i++){
+            enters[i] += total;
+        }
+
+        mitja = total / enters.length;
+
+        for (int i = 0; i < diferencies.length; i++){
+            if (enters[i] < mitja){
+                diferencies[i] = mitja - enters[i];
+            } else if (enters[i] > mitja){
+                diferencies[i] = enters[i] - mitja;
+            }
+        }
+
+        valorProper = diferencies[0];
+
+        for (int i = 1; i < diferencies.length; i++){
+            if (valorProper > diferencies[i]){
+                valorProper = diferencies[i];
+            }
+        }
+
+        System.out.println(valorProper);
+        return valorProper;
     }
 }
