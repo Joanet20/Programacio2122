@@ -126,14 +126,15 @@ public class ExamenArray {
     }*/
 
     public static int exercici10(){
-        int [] enters = {2, 4, 5, 9, 7};
+        int [] enters = {24, 4, 5, 9, 7};
         int [] diferencies = new int[enters.length];
-        int valorProper;
+        int valorProper = enters[0];
+        int diferencia;
         int total = 0;
         int mitja;
 
         for (int i = 0; i < enters.length; i++){
-            enters[i] += total;
+            total += enters[i];
         }
 
         mitja = total / enters.length;
@@ -146,15 +147,15 @@ public class ExamenArray {
             }
         }
 
-        valorProper = diferencies[0];
+        diferencia = diferencies[0];
 
         for (int i = 1; i < diferencies.length; i++){
-            if (valorProper > diferencies[i]){
-                valorProper = diferencies[i];
+            if (diferencia > diferencies[i]){
+                diferencia = diferencies[i];
+                valorProper = enters[i];
             }
         }
-
-        System.out.println(valorProper);
+        
         return valorProper;
     }
 }
