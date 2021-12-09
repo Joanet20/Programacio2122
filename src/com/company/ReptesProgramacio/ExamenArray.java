@@ -105,4 +105,17 @@ public class ExamenArray {
         System.out.println(ordre);
         return ordre;
     }
+
+    public static int [] exercici8(){
+        int [] enters = {2, 4, 7, 9, 7};
+        int [] reves = new int[enters.length];
+
+        for (int i = 0; i < enters.length; i++){
+            reves[i] = enters[enters.length - i -1];
+        }
+        for (int i = 0; i < reves.length; i++){
+            System.out.println(reves[i]);
+        }
+        return reves;
+    }
 }
