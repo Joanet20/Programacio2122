@@ -116,14 +116,19 @@ public class ExamenArray {
         return reves;
     }
 
-    /*public static int exercici9(){
+    public static int exercici9(){
 
         int num = 9;
-
         int [] enters = {2, 4, 7, 9, 7};
 
-
-    }*/
+        for (int i = 0; i < enters.length; i++){
+            if (enters[i] == num){
+                return num;
+            }
+        }
+        
+        return -1;
+    }
 
     public static int exercici10(){
         int [] enters = {24, 4, 5, 9, 7};
@@ -155,7 +160,7 @@ public class ExamenArray {
                 valorProper = enters[i];
             }
         }
-        
+
         return valorProper;
     }
 }
