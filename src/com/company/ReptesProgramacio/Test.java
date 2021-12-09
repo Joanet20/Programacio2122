@@ -12,6 +12,8 @@ public class Test {
 
         //ExamenArray.exercici5();
 
-        ExamenArray.exercici6();
+        //ExamenArray.exercici6();
+
+        ExamenArray.exercici7();
     }
 }

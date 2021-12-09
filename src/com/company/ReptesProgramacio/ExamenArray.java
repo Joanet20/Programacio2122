@@ -79,6 +79,29 @@ public class ExamenArray {
         } else {
             ordre = true;
         }
+        return ordre;
+    }
+
+    public static boolean exercici7(){
+
+        boolean ordre;
+        int [] enters ={1, 2, 3, 4};
+        int [] impars = new int[(enters.length / 2) + 1];
+        int [] parells = new int[(enters.length / 2) + 1];
+        int cont = 0;
+
+        for (int i = 0; i < enters.length; i++){
+            if (i%2!=0){
+                impars[cont] = enters[i];
+                cont++;
+            }
+        }
+
+        if (impars[0] < impars[1]){
+            ordre = false;
+        } else {
+            ordre = true;
+        }
         System.out.println(ordre);
         return ordre;
     }
