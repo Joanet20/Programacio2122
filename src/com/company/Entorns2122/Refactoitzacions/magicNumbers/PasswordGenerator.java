@@ -7,8 +7,11 @@ public class PasswordGenerator {
     private Random random = new Random();
     private String characters = "abcdefghijkmnopqrstuvwxyz23456789";
 
-    public String generatePassword(int length, int longitudMin, int longitudMax) throws Exception {
-        if (length < longitudMin || length > longitudMax) {
+    private static int MIN_LENGTH = 6;
+    private static int MAX_LENGTH = 15;
+
+    public String generatePassword(int length, int minLength, int maxLength) throws Exception {
+        if (length < minLength || length > maxLength) {
             throw new Exception("Wrong password length: " + length);
         } else {
             String password = "";

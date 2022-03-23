@@ -13,25 +13,15 @@ public class Invoice {
         this.year = year;
     }
 
+    public boolean isValid (float subtotal){
+        return customer.getAge() < 18 || new GregorianCalendar().get(Calendar.YEAR) > year || subtotal < 0.5f;
+    }
+
     public float calculateTotal(float subtotal, float vat) {
-        if (isValidAge() || isValidDate() || subtotal < 0.5f)
+        if (isValid(subtotal))
             return 0;
 
         return subtotal * vat;
-    }
-
-    public boolean isValidAge(){
-        if (customer.getAge() < 18)
-            return true;
-
-        return false;
-    }
-
-    public boolean isValidDate(){
-        if (new GregorianCalendar().get(Calendar.YEAR) > year)
-            return true;
-
-        return false;
     }
 
 }

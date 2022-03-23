@@ -12,33 +12,18 @@ public class Customer {
         this.salary = salary;
     }
 
-    public boolean isEdatLaboral(){
-        if (age > 17 && age < 66){
-            return true;
-        }
-        return false;
-    }
-
-    public boolean isSalary(){
-        if ((salary - (salary * 0.2f)) < 1000f){
-            return true;
-        }
-        return false;
-    }
-
-    public boolean isPlus(float totalAmount){
-        if (totalAmount * 0.5 < 100){
-            return true;
-        }
-        return false;
-    }
-
 
     public float applyDiscount (float totalAmount) {
-        if ((isEdatLaboral()) && isSalary() && isPlus(totalAmount)) {
+
+        boolean isValidAge = age > 17 && age < 66;
+        boolean isLowSalary = (salary - (salary * 0.2f)) < 1000f;
+        boolean isLowDiscount = totalAmount * 0.5 < 100;
+
+        if ((isValidAge) && (isLowSalary) && (isLowDiscount)) {
             return totalAmount * 0.9f;
         } else {
             return totalAmount;
         }
     }
+
 }

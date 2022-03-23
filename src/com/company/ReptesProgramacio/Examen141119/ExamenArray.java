@@ -1,4 +1,4 @@
-package com.company.ReptesProgramacio;
+package com.company.ReptesProgramacio.Examen141119;
 
 public class ExamenArray {
 
@@ -126,11 +126,12 @@ public class ExamenArray {
                 return num;
             }
         }
-        
+
         return -1;
     }
 
     public static int exercici10(){
+
         int [] enters = {24, 4, 5, 9, 7};
         int [] diferencies = new int[enters.length];
         int valorProper = enters[0];
@@ -161,6 +162,9 @@ public class ExamenArray {
             }
         }
 
+        System.out.println(valorProper);
         return valorProper;
     }
+
+
 }

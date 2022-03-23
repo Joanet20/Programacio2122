@@ -1,4 +1,4 @@
-package com.company.ReptesProgramacio;
+package com.company.ReptesProgramacio.Examen141119;
 
 public class Test {
     public static void main(String[] args) {

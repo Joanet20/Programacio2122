@@ -2,44 +2,71 @@ package com.company.Entorns2122.Refactoitzacions.extractMethod;
 
 public class UrlNormalizer {
 
-    public String trimWhiteSpaces(String title){
+
+
+    public String normalize(String title) {
         String url = "";
+        // First we trim whitespaces
         url = title.trim();
+
+        // Remove special chars
+        String specialRemoved = "";
+        for (int i = 0; i < url.length(); i++) {
+            if (url.charAt(i) != ',' && url.charAt(i) != ':'
+                    && url.charAt(i) != '.' && url.charAt(i) != '?') {
+                specialRemoved += url.charAt(i);
+            }
+        }
+
+        url = specialRemoved;
+
+        // Replace white spaces with hyphens
+        String spacesReplaced = "";
+        for (int i = 0; i < url.length(); i++) {
+            if (url.charAt(i) == ' ') {
+                spacesReplaced += "-";
+            } else {
+                spacesReplaced += url.charAt(i);
+            }
+        }
+        url = spacesReplaced;
+
+        // lowercase everything
+        url = url.toLowerCase();
+
         return url;
     }
 
-    public String removeSpecialCharacters(String title){
-        String specialRemoved = "";
+    public String trimSpaces (String url){
+        return url.trim();
+    }
 
-        for (int i = 0; i < trimWhiteSpaces(title).length(); i++) {
-            if (trimWhiteSpaces(title).charAt(i) != ',' && trimWhiteSpaces(title).charAt(i) != ':'
-                    && trimWhiteSpaces(title).charAt(i) != '.' && trimWhiteSpaces(title).charAt(i) != '?') {
-                specialRemoved += trimWhiteSpaces(title).charAt(i);
+    public String removeSpecialChars (String url){
+        String specialRemoved = "";
+        for (int i = 0; i < url.length(); i++) {
+            if (url.charAt(i) != ',' && url.charAt(i) != ':'
+                    && url.charAt(i) != '.' && url.charAt(i) != '?') {
+                specialRemoved += url.charAt(i);
             }
         }
 
         return specialRemoved;
     }
 
-    public String replaceWhiteSpaces(String title){
+    public String replaceSpaces (String url){
         String spacesReplaced = "";
-        for (int i = 0; i < trimWhiteSpaces(title).length(); i++) {
-            if (trimWhiteSpaces(title).charAt(i) == ' ') {
+        for (int i = 0; i < url.length(); i++) {
+            if (url.charAt(i) == ' ') {
                 spacesReplaced += "-";
             } else {
-                spacesReplaced += trimWhiteSpaces(title).charAt(i);
+                spacesReplaced += url.charAt(i);
             }
         }
-
         return spacesReplaced;
     }
 
-    public String minuscules(String title){
-
-        String textMinus = "";
-        textMinus = trimWhiteSpaces(title).toLowerCase();
-
-        return textMinus;
+    public String urlToLowerCase (String url){
+        return url.toLowerCase();
     }
 
 }

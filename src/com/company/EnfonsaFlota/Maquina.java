@@ -1,7 +1,4 @@
-package com.company;
-
-import java.util.Random;
-import java.util.Scanner;
+package com.company.EnfonsaFlota;
 
 public class Maquina{
 
@@ -9,6 +6,14 @@ public class Maquina{
 
     public Maquina() {
         this.vides = 5;
+    }
+
+    public int getVides(){
+        return vides;
+    }
+
+    public void setVides(int vides){
+        this.vides = vides;
     }
 
 
@@ -70,6 +75,20 @@ public class Maquina{
                 }
             }
         }
+    }
+
+
+    public int[][] crearTableroReferenciaMaquina(Tablero tablero){
+
+        int [][] tableroReferencia = new int[tablero.getMaximY()][tablero.getMaximX()];
+
+        for (int i = 0; i < tableroReferencia.length; i++){
+            for (int j = 0; j < tableroReferencia[0].length; j++){
+                tableroReferencia[i][j] = 0;
+            }
+        }
+
+        return tableroReferencia;
     }
 
 }

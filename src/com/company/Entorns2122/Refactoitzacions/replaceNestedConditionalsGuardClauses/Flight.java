@@ -20,11 +20,13 @@ public class Flight {
         if (passenger.isUnemployed()) {
             return unemployedDiscount();
         }
+
         if (isChristmas()) {
-            return 0;
+            return  0;
         }
 
         return normalPrice();
+
     }
 
     private float unemployedDiscount() {

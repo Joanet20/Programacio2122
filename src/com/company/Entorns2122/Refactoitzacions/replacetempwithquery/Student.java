@@ -12,17 +12,14 @@ public class Student {
 
     public float calculateAverage(float homework, float exam) {
 
-
         if (hasGoodAttitude) {
-            return calculateMark(homework, exam) + 1;
+            return mark(homework, exam) + 1;
         } else {
-            return calculateMark(homework, exam);
+            return mark(homework, exam);
         }
     }
 
-
-    public float calculateMark(float homework, float exam){
-        float mark = (homework + exam) / 2;
-        return mark;
+    public float mark (float homework, float exam){
+        return (homework + exam) / 2;
     }
 }

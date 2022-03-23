@@ -1,4 +1,4 @@
-package com.company;
+package com.company.EnfonsaFlota;
 
 import java.util.Scanner;
 
@@ -7,9 +7,9 @@ public class Tablero {
     private int maximX;
     private int maximY;
 
-    public Tablero(int maximX, int maximY){
-        this.maximX = maximX;
-        this.maximY = maximY;
+    public Tablero(){
+        this.maximX = 15;
+        this.maximY = 15;
     }
 
     public int getMaximX(){

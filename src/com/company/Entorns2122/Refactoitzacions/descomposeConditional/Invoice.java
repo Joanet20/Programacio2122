@@ -8,6 +8,10 @@ public class Invoice {
         this.customer = customer;
     }
 
+    public boolean isValidAge (){
+        return customer.getAge() < 18 || customer.getAge() > 65;
+    }
+
     public float calculatePayment (float price, float discount, float vat) {
         float payment = 0;
 
@@ -17,14 +21,5 @@ public class Invoice {
             payment = price * vat;
         }
         return payment;
-    }
-
-    public boolean isValidAge(){
-
-        if (customer.getAge() < 18 || customer.getAge() > 65){
-            return true;
-        }
-
-        return false;
     }
 }

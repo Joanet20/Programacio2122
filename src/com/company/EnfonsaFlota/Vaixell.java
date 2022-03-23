@@ -1,20 +1,23 @@
-package com.company;
+package com.company.EnfonsaFlota;
 
 import java.util.Scanner;
 
 public class Vaixell {
 
+    private int id;
     private boolean isEnfonsat;
     private int mida;
     private String nom;
-    private boolean[][] posicionsOcupades;
-    int videsVaixell = mida;
+    private int[][] posicionsOcupades = new int[15][15];
+    int videsVaixell;
 
 
-    public Vaixell(boolean isEnfonsat, int mida, String nom) {
+    public Vaixell(int id, boolean isEnfonsat, int mida, String nom) {
+        this.id = id;
         this.isEnfonsat = isEnfonsat;
         this.mida = mida;
         this.nom = nom;
+        this.videsVaixell = mida;
     }
 
     public int getMida(){
@@ -25,11 +28,11 @@ public class Vaixell {
         return nom;
     }
 
-    public boolean[][] getPosicionsOcupades(){
+    public int[][] getPosicionsOcupades(){
         return posicionsOcupades;
     }
 
-    public void setPosicionsOcupades(boolean[][] posicionsOcupades){
+    public void setPosicionsOcupades(int[][] posicionsOcupades){
         this.posicionsOcupades = posicionsOcupades;
     }
 
@@ -41,12 +44,17 @@ public class Vaixell {
         this.videsVaixell = videsVaixell;
     }
 
+    public int getId(){
+        return id;
+    }
+
+
 
     /*Retorna un Array en el que el progrma
     mirarà si una posició està ocupada
     o no a l'hora de disparar*/
 
-    public boolean[][] posOcupadesJugador(Tablero tableroJugador, Vaixell[] vaixells, int[][] barcosJugador){
+    /*public boolean[][] posOcupadesJugador(Tablero tableroJugador, Vaixell[] vaixells, int[][] barcosJugador){
 
         boolean[][] ocupaJugador = new boolean[tableroJugador.getMaximY()][tableroJugador.getMaximX()];
 
@@ -84,6 +92,6 @@ public class Vaixell {
         }
 
         return ocupaMaquina;
-    }
+    }*/
 
 }

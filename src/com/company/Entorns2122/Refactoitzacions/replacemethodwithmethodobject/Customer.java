@@ -16,74 +16,35 @@ public class Customer {
         this.type = type;
     }
 
-    public double applyDiscount(double price, double discount) {
-        double finalPrice;
-        double appliedVat;
-
-        /*switch (getType()) {
-            case Customer.NORMAL:
-                appliedVat = 1.21f;
-                break;
-            case Customer.SPECIAL:
-                appliedVat = 1.15f;
-                break;
-            case Customer.VIP:
-                appliedVat = 1.04f;
-                break;
-            default:
-                appliedVat = 1.21f;
-                break;
-        }*/
-
-        if (price > 50 && isVip()) {
-            finalPrice = price * 0.5;
-        } else if (price > 10 && isSpecial()) {
-            finalPrice = price * 0.1;
-        } else {
-            finalPrice = price;
-        }
-
-        return finalPrice * calcularDescompte() - discount;
-    }
-
-    public double calcularDescompte(){
-
-        double appliedVat;
+    public double calcAppliedVat (){
 
         switch (getType()) {
             case Customer.NORMAL:
-                appliedVat = 1.21f;
-                break;
+                return 1.21f;
             case Customer.SPECIAL:
-                appliedVat = 1.15f;
-                break;
+                return 1.15f;
             case Customer.VIP:
-                appliedVat = 1.04f;
-                break;
+                return 1.04f;
             default:
-                appliedVat = 1.21f;
-                break;
+                return 1.21f;
         }
-
-        return appliedVat;
     }
 
-    /*public double calcularPreuFinal(double price){
-
-        double finalPrice;
+    public double calcFinalPrice (double price){
 
         if (price > 50 && isVip()) {
-            finalPrice = price * 0.5;
+            return price * 0.5;
         } else if (price > 10 && isSpecial()) {
-            finalPrice = price * 0.1;
+            return price * 0.1;
         } else {
-            finalPrice = price;
+            return price;
         }
+    }
 
-        return finalPrice;
-    }*/
+    public double applyDiscount(double price, double discount) {
 
-
+        return calcFinalPrice(price) * calcAppliedVat() - discount;
+    }
 
     public int getType() {
         return type;
